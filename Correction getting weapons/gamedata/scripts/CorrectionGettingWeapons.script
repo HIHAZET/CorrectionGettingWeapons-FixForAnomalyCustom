@@ -1,0 +1,11 @@
+function on_game_start()
+    RegisterScriptCallback("on_key_press", on_key_press)
+end
+
+function on_key_press(key)
+    
+    if key == DIK_keys.DIK_DELETE then 
+        news_manager.send_tip(db.actor, "Animations stoped", nil, nil, 5000)
+        game.stop_hud_motion()
+    end
+end
